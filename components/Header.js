@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Center from "@/components/Center";
 import { useContext, useState } from "react";
 import { CartContext } from "@/components/CartContext";
+import BarsIcon from "./icons/Bars";
 
 
 const StyledHeader = styled.header`
@@ -81,6 +82,7 @@ export default function Header() {
             <NavLink href={"/cart"}>Cart ({cartProducts.length})</NavLink>
           </StyledNav>
           <NavButton onClick={() => setMobileNavActive((prev) => !prev)}>
+            <BarsIcon/>
           </NavButton>
         </Wrapper>
       </Center>
